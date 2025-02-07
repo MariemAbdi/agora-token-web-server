@@ -28,10 +28,10 @@ package main
      appID := "d9b18a454c064147955550375c8354c1"
      appCertificate := "77874e305faa4da4a4c3507f2ad10ed8"
      // Ensure that the expiration time of the token is later than the permission expiration time. Permission expiration time, unit is seconds
-     tokenExpireTimeInSeconds := uint32(40)
+     tokenExpireTimeInSeconds := uint32(3600)
      // The token-privilege-will-expire callback is triggered 30 seconds before the permission expires.
      // For demonstration purposes, set the expiration time to 40 seconds. You can see the process of the client automatically updating the Token
-     privilegeExpireTimeInSeconds := uint32(40)
+     privilegeExpireTimeInSeconds := uint32(3600)
 
      result, err := rtctokenbuilder.BuildTokenWithUid(appID, appCertificate, channelName, int_uid, role, tokenExpireTimeInSeconds, privilegeExpireTimeInSeconds)
      if err != nil {
